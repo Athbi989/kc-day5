@@ -1,80 +1,107 @@
 
 
 body {
-    margin: 0;
-    background-color: rgb(44, 44, 44);
-    font-family: 'Titillium Web', sans-serif;
-
+  margin: 0; /* عشان نشيل الإزاحة الإفتراضية */
+  background-color: rgb(44, 44, 44);
+  font-family: 'Titillium Web', sans-serif;
 }
-            .box {
-            background-color: rgb(58, 58, 58);
-            width: 450px;
-            height: 550px;
-            margin: 1pc;
-            color: white;
-            font-size: 34px;
-            padding: 7px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            opacity: 0.5;
-            }
 
-            .box:hover {
-                box-shadow: rgb(255 28 28 / 35%) 0px 5px 15px;
-                opacity: 1;
-            }
+/* Header ( القائمة العلويه ) */
+
+.header {
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    display: flex; /* عشان نخلي العناصر الي داخل كريمه */
+
+    /* نعدل محور السينات (يمين-يسار) */
+    justify-content:space-between; /*  نخلي القائمة اليمين واليسار بينهم مسافة  */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
-        .container { 
-            margin: 5px;
-            display: flex;
-            justify-content: center;
-            height: 100vh;
-            flex-wrap: wrap;
-        }
+/* Header --> Left Menu (الي فيها اللوقو والعنوان) */
 
-        .box img {
-            width: 100%;
-        }
+.left {
+     
+    display: flex; /* نخلي الصوره والعنوان كريمين عشان يكونون جنب بعض */
+    align-items: center;
+    color: white;
+}
+
+.left h2 { 
+    /*
+     نغير خصائص (h2) 
+     الي داخل كلاس left 
+     فقط !!
+    */
+    margin:15px;
+    font-size: 25px;
+}
+
+/* Header --> Right Menu (الي فيها تنقل الصفحات) */
+
+.right {
+    display: flex;
+    align-items: center;
+    /* نخلي العناصر كريمه وبالنص بالمحور الصادي */
+}
+
+.right a {
+    /*
+     نغير خصائص (a) 
+     الي داخل كلاس right 
+     فقط !!
+    */
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 5px;
+    margin-right: 15px;
+}
+.right a:hover {
+    color: black;
+}
 
 
-        .header {
-            background-color: rgb(53, 53, 53);
-            width: 100%;
-            height: 150px;
-            padding: 5px;
-            display: flex;
-            justify-content:space-between;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-       
-        }
+
+/* ستايل الكرت */
+
+.box {
+    background-color: rgb(58, 58, 58);
+    width: 220px;
+    height: 330px;
+    margin: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    opacity: 0.5;
+}
+
+.box img {
+    width: 100%; /* علشان الصورة تاخذ حجم الكرت كامل */
+}
+
+.box:hover {
+    box-shadow: rgb(255 28 28 / 35%) 0px 5px 15px;
+    opacity: 1;
+}
 
 
-        .left {
-            display: flex;
-            align-items: center;
-            color: white;
-        }
+/* القائمة الي تحوي الكروت داخلها */
+.container { 
+    margin: 5px;
+    display: flex; /* نخليهم كريمين عشان يكونون الكروت جنب بعض*/
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
 
-        .left h2 {
-            margin:15px;
-            font-size: 45px;
-        }
 
-        .right a {
-            color: white;
-            font-size: 40px;
-            text-decoration: none;
-            margin: 5px;
-        }
-        .right a:hover {
-            color: black;
-  
-        }
 
-        .right {
-            display: flex;
-            align-items: center;
-        }
+    
